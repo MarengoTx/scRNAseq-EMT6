@@ -1,4 +1,4 @@
-## Code for the Analysis of single cell RNA and TCR sequencing analysis
+## Code for the Analysis of single cell RNA and TCR sequencing data
 
 This file outlines different packages that were used
 
@@ -20,7 +20,7 @@ Ggplot2
 &nbsp;
 &nbsp;
 
-### **Installation and Launching Shiny Dashboard**
+### **Installation and Instructions**
 ---------------------
 The **code** can be downloaded and opened in **RStudios**. Please download the **_Required_Packages.R_** file and run it, which will attempt to automatically install the required packages. 
 
