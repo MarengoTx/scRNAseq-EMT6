@@ -1,4 +1,4 @@
-## Code for the Analysis of single cell RNA and TCR sequencing data
+## Code for the Analysis of single cell RNA sequencing for EMT6 mouse
 
 This file outlines different packages that were used
 
