@@ -84,14 +84,15 @@ sc_data@meta.data %>%
   group_by(new_labels_edited, orig.ident) %>%
   tally() %>%
   ungroup() %>%
-  mutate(perc_TILs = (n/sum(n))*100) %>% View
+  group_by(orig.ident) %>%
+  mutate(perc_TILs = (n/sum(n))*100) %>% 
 ggplot(.,
        aes(x = new_labels_edited,
            y = perc_TILs,
            fill = factor(orig.ident, levels = c("Treated", "CTR")))) +
   geom_bar(stat = "identity", position = "dodge", width = 0.7, col = "black") +
   theme_classic() +
-  ylim(0, 30) +
+  # ylim(0, 30) +
   coord_flip() +
   scale_fill_manual(values = c("CTR" = "gray", 
                                "Treated" = "darkorange")) +
