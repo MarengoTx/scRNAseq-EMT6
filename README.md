@@ -22,7 +22,11 @@ Ggplot2
 
 ### **Installation and Instructions**
 ---------------------
-The **code** can be downloaded and opened in **RStudios**. Please download the **_Required_Packages.R_** file and run it, which will attempt to automatically install the required packages. 
+The **code** can be downloaded and opened in **RStudios**. </br>
+The `marengo_code_for_paper_jan_2023.R` contains all the code needed to reproduce the figues in the paper.</br>
+The `sc_data.rds` file is available at the following address: xxxxx </br>
+The `all_res_deg_for_heat.txt` file contains the unfiltered results from DGE anlaysis, also used to create the heatmap with DGE and volcano plots.</br>
+The `genes_for_heatmap_fig5F.xlsx` contains the genes included in the heatmap in figure 5F.</br>
 
 >  Ensure you have R version 4.1.2 or higher for compatibility. 
 
