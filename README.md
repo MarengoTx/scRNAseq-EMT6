@@ -1,4 +1,18 @@
-## Code for the Analysis of single cell RNA sequencing for EMT6 mouse
+## Table of Contents
+
+1. [Main Description](#main-description)
+2. [File Descriptions](#file-descriptions)
+3. [Linked Files](#linked-files)
+4. [Installation and Instructions](#installation-and-instructions)
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+
+## **Main Description**
+------------------------
 
 This is the GitHub repository for the manuscript titled "A TCR β chain-directed antibody-fusion molecule that activates and expands subsets of T cells and promotes antitumor activity.". The code included in the file titled `marengo_code_for_paper_jan_2023.R` was used to generate the figures from the single-cell RNA sequencing data. 
 
@@ -19,15 +33,7 @@ ComplexHeatmap
 &nbsp;
 &nbsp;
 
-## Table of Contents
 
-1. [File Descriptions](#file-descriptions)
-2. [Linked Files](#linked-files)
-3. [Installation and Instructions](#installation-and-instructions)
-
-&nbsp;
-&nbsp;
-&nbsp;
 
 
 ### **File Descriptions**
