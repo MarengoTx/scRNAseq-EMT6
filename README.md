@@ -23,7 +23,7 @@ ComplexHeatmap
 
 1. [File Descriptions](#file-descriptions)
 2. [Linked Files](#linked-files)
-3. [Installation](#installation-and-launching-shiny-dashboard)
+3. [Installation and Instructions](#installation-and-instructions)
 
 &nbsp;
 &nbsp;
