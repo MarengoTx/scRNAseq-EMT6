@@ -91,7 +91,7 @@ This repository contains code for the analysis of single cell RNA-seq dataset. T
 
 ### **Installation and Instructions**
 --------------------------------------
-The code included in this submission requires several essential packagee, as listed above. Please follow these instructions to install these packages:
+The code included in this submission requires several essential packages, as listed above. Please follow these instructions for installation:
 
 &nbsp;
 
@@ -112,7 +112,7 @@ The code included in this submission requires several essential packagee, as lis
 
 &nbsp;
 
-You can use the following code to set working directory in R:
+You can use the following code to set the working directory in R:
 
 > setwd(directory)
 
