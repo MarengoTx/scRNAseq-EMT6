@@ -43,11 +43,11 @@ The code included in this submission requires several essential packagee, as lis
 1. Download the **RData** or `.Rds` file from [Zenodo](https://zenodo.org/deposit/7566113) (Zenodo DOI: 10.5281/zenodo.7566113).
 2. Open [R-Studios](https://www.rstudio.com/tags/rstudio-ide/) or a similar integrated development environment (IDE) for R. 
 3. Set your working directory to where the following files are located:
-  - `marengo_code_for_paper_jan_2023.R`
-  - `Install_Packages.R`
-  - `sc_data.rds`
-  - `genes_for_heatmap_fig5F.xlsx`
-  - `all_res_deg_for_heat.txt`
+   - `marengo_code_for_paper_jan_2023.R`
+   - `Install_Packages.R`
+   - `sc_data.rds`
+   - `genes_for_heatmap_fig5F.xlsx`
+   - `all_res_deg_for_heat.txt`
 
 &nbsp;
 
@@ -89,14 +89,14 @@ The `genes_for_heatmap_fig5F.xlsx` contains the genes included in the heatmap in
 This repository contains code for the analysis of single cell RNA-seq dataset. The dataset contains raw FASTQ files, as well as, the aligned files that were deposited in GEO. The **Rdata** or `.Rds` file was deposited in Zenodo. Provided below are descriptions of the linked datasets:
 
 1. Gene Expression Omnibus (GEO) ID: [GSE223311](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE223311)
-  - **Title**: Gene expression profile at single cell level of CD4+ and CD8+ tumor infiltrating lymphocytes (TIL) originiating from the EMT6 tumor model from mSTAR1302 treatment.
-  - **Description**: This submission contains the `matrix.mtx`, `barcodes.tsv`, and `genes.tsv` files for each replicate and condition, corresponding to the aligned files for single cell sequencing data. 
-  - **Submission type**: Private. In order to gain access to the repository, you must use a [reviewer token](https://www.ncbi.nlm.nih.gov/geo/info/reviewer.html).
+   - **Title**: Gene expression profile at single cell level of CD4+ and CD8+ tumor infiltrating lymphocytes (TIL) originiating from the EMT6 tumor model from mSTAR1302 treatment.
+   - **Description**: This submission contains the `matrix.mtx`, `barcodes.tsv`, and `genes.tsv` files for each replicate and condition, corresponding to the aligned files for single cell sequencing data. 
+   - **Submission type**: Private. In order to gain access to the repository, you must use a [reviewer token](https://www.ncbi.nlm.nih.gov/geo/info/reviewer.html).
 
 2. Zenodo DOI: [10.5281/zenodo.7566113](https://zenodo.org/deposit/7566113)
    - **Title**: A TCR β chain-directed antibody-fusion molecule that activates and expands subsets of T cells and promotes antitumor activity. 
-  - **Description**:  This submission contains the **Rdata** or `.Rds` file, which is an R object file. This is a necesary file to use the code. 
-  - **Submission type**: Restricted Acess. In order to gain access to the repository, you must contact the author.
+   - **Description**:  This submission contains the **Rdata** or `.Rds` file, which is an R object file. This is a necesary file to use the code. 
+   - **Submission type**: Restricted Acess. In order to gain access to the repository, you must contact the author.
 
 
 &nbsp;
@@ -105,5 +105,4 @@ This repository contains code for the analysis of single cell RNA-seq dataset. T
 &nbsp;
 &ensp;
 &ensp;
-
 
