@@ -2,7 +2,7 @@
 
 This is the GitHub repository for the manuscript titled "A TCR β chain-directed antibody-fusion molecule that activates and expands subsets of T cells and promotes antitumor activity.". The code included in the file titled `marengo_code_for_paper_jan_2023.R` was used to generate the figures from the single-cell RNA sequencing data. 
 
-The following libraries need to be installed in order to use the codde:
+The following libraries are required for script execution:
 
 ```
 Seurat
@@ -105,11 +105,7 @@ You can use the following code to set working directory in R:
 &nbsp;
 &nbsp;
 &nbsp; 
-&ensp;
 &nbsp;
-&ensp;
-&ensp;
-&ensp;
 &nbsp;
 &ensp;
 &ensp;
