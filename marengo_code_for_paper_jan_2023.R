@@ -28,7 +28,7 @@ c25 <- c("dodgerblue2",
 
 # load data
 # the code assumes that the data files ar put in your current working directory
-sc_data <- readRDS("sc_data.RData")
+sc_data <- readRDS("Marengo_newID_March242023.rds")
 
 # label cells as positive for TRBV13
 sc_data$DP <- sc_data@assays$MAGIC_RNA@data["Trbv13-2",] + sc_data@assays$MAGIC_RNA@data["Trbv13-3",]
@@ -39,21 +39,22 @@ sc_data$Trvb132_133 <- sc_data@assays$MAGIC_RNA@data["Trbv13-2",] + sc_data@assa
 
 
 ## Fig 5A
+jpeg("UMAP_figure5A.jpeg",height=6,width=10,units="in",res=600)
 ggplot(sc_data@meta.data,
        aes(x = sc_data@reductions$umap@cell.embeddings[,"UMAP_1"],
            y = sc_data@reductions$umap@cell.embeddings[,"UMAP_2"],
-           col = new_labels_edited)) +
+           col = new_names_mar2023)) +
   geom_point(size = 0.75) +
   theme_classic() +
   scale_color_manual(values = c("CD4_Treg"  = "green",
-                                "CD8_Effector_Exhauted"  = c25[4],
+                                "CD8_Exhausted_2"  = c25[4],
                                 "CD8_Effector_Memory"  = "#008080",
                                 "CD8_Effector" = "black",
-                                "CD8_Memory_Exhausted"  = "red",
-                                "CD8_Naive_CM"  = "orange",
+                                "CD8_Exhausted_1"  = "red",
+                                "CD8_Naive"  = "orange",
                                 "CD4_CM"  = c25[1],
                                 "CD4_T_helper"  = "purple",
-                                "CD8_Exhausted"  = c25[7],
+                                "CD8_Exhausted_3"  = c25[7],
                                 "CD8_Precursor_Exhausted"  = c25[10],
                                 "Other" = c25[11],
                                 "CD4_Effector_Memory" = c25[15],
@@ -65,7 +66,7 @@ ggplot(sc_data@meta.data,
   theme(axis.text = element_text(size = 10),
         legend.text = element_text(size = 10)) +
   facet_wrap(~ orig.ident)
-
+dev.off()
 
 
 ## Fig 5B
@@ -105,38 +106,40 @@ ggplot(.,
 
 ## Fig 5E
 # read DEG data
-deg <- read.table("all_res_deg_for_heat.txt", sep="\t", header = T) 
+deg <- read.table("all_res_deg_for_heat_updated_march2023.txt", sep="\t", header = T) 
 
+jpeg("Figure5E_heatmap.jpeg",height=6,width=5,unit="in",res=600)
 as.data.frame.matrix(table(deg$.id,
-                           deg$Direction)) %>%
-  mutate(NS = NULL) %>%
-  filter(rownames(.) != "Myeloid Lineage") %>%
-  Heatmap(.,
-          cluster_rows = T,
-          cluster_columns = F,
-          col = colorRamp2(breaks = c(0,10,50,150),
-                           colors = c("#F5F5F5", "#DCDCDC", "#696969", "black")),
-          border = T, 
-          name = "N")
+                            deg$Direction)) %>%
+     mutate(NS = NULL) %>%
+     filter(rownames(.) != "Myeloid Lineage") %>%
+     Heatmap(.,
+             cluster_rows = T,
+             cluster_columns = F,
+             col = colorRamp2(breaks = c(0,10,50,150),
+                              colors = c("#F5F5F5", "#DCDCDC", "#696969", "black")),
+             border = T, 
+             name = "N")
+dev.off()
 
 ## Fig 5F
 # read genes
 genes2use <- readxl::read_xlsx("genes_for_heatmap_fig5F.xlsx", sheet = 1, col_names = T) %>% pull(Gene)
 row_ind <- which(rownames(sc_data@assays$RNA@data) %in% genes2use)
 
-ind_samples_deg4 <- c(which(sc_data$new_labels_edited %in% c("CD4_T_helper",
-                                                                "CD8_Memory_Exhausted",
+ind_samples_deg4 <- c(which(sc_data$new_names_mar2023 %in% c("CD4_T_helper",
+                                                                "CD8_Exhausted_1",
                                                                 "CD8_Effector",
                                                                 "CD8_Effector_Memory") & sc_data$orig.ident == "CTR"),
-                      which(sc_data$new_labels_edited %in% c("CD4_T_helper",
-                                                                "CD8_Memory_Exhausted",
+                      which(sc_data$new_names_mar2023 %in% c("CD4_T_helper",
+                                                                "CD8_Exhausted_1",
                                                                 "CD8_Effector",
                                                                 "CD8_Effector_Memory") & sc_data$orig.ident == "Treated" & sc_data$TRBV13_2and3_pos == "YES"))
 
 heat <- AverageExpression(subset(sc_data, cells = ind_samples_deg4), 
                           assays = "MAGIC_RNA",
                           features = str_to_sentence(genes2use), 
-                          group.by = "new_labels_edited_treatment")[[1]]
+                          group.by = "new_labels_edited_treatment_mar2023")[[1]]
 cls <- colnames(heat)
 heat <- t(apply(heat,1,scale))
 colnames(heat) <- cls
@@ -148,10 +151,10 @@ ha <- HeatmapAnnotation(df = df_heat,
                                                  "Treated+TRBVpos" = "#800000"),
                                    CellType = c("CD8_Effector_Memory"  = "#008080",
                                                 "CD8_Effector" = "black",
-                                                "CD8_Memory_Exhausted"  = "red",
+                                                "CD8_Exhausted_1"  = "red",
                                                 "CD4_T_helper"  = "purple")),
                         annotation_legend_param = list(CellType = list(at = c("CD4_T_helper",
-                                                                              "CD8_Memory_Exhausted",
+                                                                              "CD8_Exhausted_1",
                                                                               "CD8_Effector",
                                                                               "CD8_Effector_Memory"))))
 
@@ -324,3 +327,11 @@ for(ii in length(cell_types_for_volcano)){
   print(gg)
 }
 
+
+#Supplementary Figure 8A:
+jpeg("FeatureScatter_Supplementary_Figure8.jpeg",height=8,width=10,units="in",res=600)
+FeatureScatter(sc_data,
+                feature1 = "Cd8a",
+                feature2 = "Cd4", cols = values, 
+                group.by = "new_names_mar2023",pt.size=1.5) + guides(color = guide_legend(override.aes = list(size = 5))) + labs(fill = "Cell Type")
+dev.off()
