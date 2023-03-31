@@ -44,8 +44,8 @@ ComplexHeatmap
 
 The **code** can be downloaded and opened in **RStudios**. </br>
 The `marengo_code_for_paper_jan_2023.R` contains all the code needed to reproduce the figues in the paper.</br>
-The `Marengo_newID_March242023.rds` file is available at the following address: https://zenodo.org/badge/DOI/10.5281/zenodo.7566113.svg  (Zenodo DOI: 10.5281/zenodo.7566113). </br>.
-The `all_res_deg_for_heat.txt` file contains the unfiltered results from DGE anlaysis, also used to create the heatmap with DGE and volcano plots.</br>
+The `Marengo_newID_March242023.rds` file is available at the following address: https://zenodo.org/badge/DOI/10.5281/zenodo.7566113.svg  (Zenodo DOI: 10.5281/zenodo.7566113). </br>
+The `all_res_deg_for_heat_updated_march2023.txt` file contains the unfiltered results from DGE anlaysis, also used to create the heatmap with DGE and volcano plots.</br>
 The `genes_for_heatmap_fig5F.xlsx` contains the genes included in the heatmap in figure 5F.</br>
 
 
