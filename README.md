@@ -44,7 +44,7 @@ ComplexHeatmap
 
 The **code** can be downloaded and opened in **RStudios**. </br>
 The `marengo_code_for_paper_jan_2023.R` contains all the code needed to reproduce the figues in the paper.</br>
-The `sc_data.rds` file is available at the following address: https://zenodo.org/deposit/7566113 </br>
+The `Marengo_newID_March242023.rds` file is available at the following address: https://zenodo.org/badge/DOI/10.5281/zenodo.7566113.svg  (Zenodo DOI: 10.5281/zenodo.7566113). </br>.
 The `all_res_deg_for_heat.txt` file contains the unfiltered results from DGE anlaysis, also used to create the heatmap with DGE and volcano plots.</br>
 The `genes_for_heatmap_fig5F.xlsx` contains the genes included in the heatmap in figure 5F.</br>
 
@@ -74,7 +74,7 @@ This repository contains code for the analysis of single cell RNA-seq dataset. T
 &ensp;
 
 
-3. Zenodo DOI: [10.5281/zenodo.7566113](https://zenodo.org/deposit/7566113)
+3. Zenodo DOI: [10.5281/zenodo.7566113](https://zenodo.org/record/7566113#.ZCcmvC2cbrJ)
    - **Title**: A TCR β chain-directed antibody-fusion molecule that activates and expands subsets of T cells and promotes antitumor activity. 
    - **Description**:  This submission contains the **Rdata** or `.Rds` file, which is an R object file. This is a necessary file to use the code. 
    - **Submission type**: Restricted Acess. In order to gain access to the repository, you must contact the author.
@@ -101,14 +101,14 @@ The code included in this submission requires several essential packages, as lis
 
 &nbsp;
 
-1. Download the **RData** or `.Rds` file from [Zenodo](https://zenodo.org/deposit/7566113) (Zenodo DOI: 10.5281/zenodo.7566113).
+1. Download the **RData** or `.Rds` file from [Zenodo](https://zenodo.org/record/7566113#.ZCcmvC2cbrJ) (Zenodo DOI: 10.5281/zenodo.7566113).
 2. Open [R-Studios](https://www.rstudio.com/tags/rstudio-ide/) or a similar integrated development environment (IDE) for R. 
 3. Set your working directory to where the following files are located:
    - `marengo_code_for_paper_jan_2023.R`
    - `Install_Packages.R`
-   - `sc_data.rds`
+   - `Marengo_newID_March242023.rds`
    - `genes_for_heatmap_fig5F.xlsx`
-   - `all_res_deg_for_heat.txt`
+   - `all_res_deg_for_heat_updated_march2023.txt`
 
 &nbsp;
 
